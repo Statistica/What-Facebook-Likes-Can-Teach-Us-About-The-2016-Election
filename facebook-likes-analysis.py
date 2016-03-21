@@ -40,7 +40,7 @@ else:
 
 scoresList=[]
 date_today=date.today() #get the current date
-print "Currently working on %s..." % name
+print "Currently analyzing %s..." % name
 likesList=[] #create an empty list of likes
 datesList=[] #create an empty list of dates
 
