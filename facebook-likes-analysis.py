@@ -72,16 +72,8 @@ for daysBehind in range(num_days_to_analyze): #begin looping for num_days_to_ana
 	totalLikes=0
 	for post in posts: #loop through every post
 		#get the total likes of the post and add it to totalLikes
-		try:
-			totalLikes+=requests.get('https://graph.facebook.com/v2.5/%s/likes?summary=true&access_token=%s' % (post['id'], access_token)).json()['summary']['total_count']
-		except KeyError:
-			print "error"
-			try:
-				totalLikes+=requests.get('https://graph.facebook.com/v2.5/%s/likes?summary=true&access_token=%s' % (post['id'], access_token)).json()['summary']['total_count']
-			except KeyError:
-				print "error2"
-				totalLikes+=requests.get('https://graph.facebook.com/v2.5/%s/likes?summary=true&access_token=%s' % (post['id'], access_token)).json()['summary']['total_count']
-
+		totalLikes+=requests.get('https://graph.facebook.com/v2.5/%s/likes?summary=true&access_token=%s' % (post['id'], access_token)).json()['summary']['total_count']
+	
 	if len(posts)==0: #if there are 0 posts, the average number of likes is 0
 					  #this prevents dividing by 0 to get the average
 		average_likes=0
