@@ -3,7 +3,6 @@
 # This code is far from perfect. I am sure that many changes can be made
 # to make it more efficient. Feel free to contact me at jonathansaewitz@gmail.com.
 
-
 import requests, time, plotly.plotly as plotly, plotly.graph_objs as go, sys
 from datetime import date, datetime, timedelta
 
