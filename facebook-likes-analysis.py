@@ -1,7 +1,7 @@
 # Written by Jonathan Saewitz, released March 21st, 2016 for Statisti.ca
 # Released under the MIT License (https://opensource.org/licenses/MIT)
 # This code is far from perfect. I am sure that many changes can be made
-# to make it more efficient. Feel free to contact me at jonathansaewitz@gmail.com.
+# to make it more efficient. Feel free to create pull requests.
 
 import requests, time, plotly.plotly as plotly, plotly.graph_objs as go, sys
 from datetime import date, datetime, timedelta
